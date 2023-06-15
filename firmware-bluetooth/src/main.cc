@@ -364,7 +364,7 @@ static void connected(struct bt_conn* conn, uint8_t conn_err) {
 
     LOG_INF("%s", addr);
 
-    CHK(bt_conn_set_security(conn, BT_SECURITY_L1));    //nowyouare
+    //CHK(bt_conn_set_security(conn, BT_SECURITY_L2));    //nowyouare
 }
 
 static void disconnected(struct bt_conn* conn, uint8_t reason) {
