@@ -160,7 +160,7 @@ static void set_led_mode(LedMode led_mode_) {
 }
 
 static void scan_start() {
-    if (CHK(bt_scan_start(BT_SCAN_TYPE_SCAN_ACTIVE))) {        //nowyouare
+    if (CHK(bt_scan_start(BT_SCAN_TYPE_SCAN_PASSIVE))) {        //nowyouare
         LOG_DBG("Scanning started.");
         scanning = true;
     }
@@ -364,7 +364,7 @@ static void connected(struct bt_conn* conn, uint8_t conn_err) {
 
     LOG_INF("%s", addr);
 
-    CHK(bt_conn_set_security(conn, BT_SECURITY_L2));
+    CHK(bt_conn_set_security(conn, BT_SECURITY_L1));    //nowyouare
 }
 
 static void disconnected(struct bt_conn* conn, uint8_t reason) {
