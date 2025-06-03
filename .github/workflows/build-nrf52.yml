@@ -25,3 +25,4 @@ jobs:
         with:
           name: artifact-${{ matrix.board }}
           path: firmware-bluetooth/remapper_${{ matrix.board }}.uf2
+
